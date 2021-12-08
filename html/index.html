@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="nui://game/ui/jquery.js"></script>
+  <script src="js/main.js"></script>
+  <link rel="stylesheet" href="css/tailwind.css">
+</head>
+<body class="flex items-center justify-center w-screen h-screen">
+  <div style="width: 800px; height: 450px;">
+    <main id="main" style="display: none;" class="relative h-full w-full bg-black text-white">
+      <!-- Header -->
+      <div class="font-bold w-full border-b-2 border-red-500 flex items-center justify-between p-1 px-4">
+        <div class="text-xl">
+          <span>RADIO DO BOTSA</span>
+        </div>
+        <div>
+          <span id="time">14:13</span>
+        </div>
+        <div class="flex">
+          <span>100%</span>
+        </div>
+      </div>
+      <div style="display: none;" id="music-modal" class="space-y-3 absolute w-full h-full bg-black flex justify-center items-center flex-col">
+        <input type="text" id="name" placeholder="Name" class="p-4 focus:outline-none rounded-sm bg-gray-900">
+        <input type="text" id="url" placeholder="https://youtube.com/conadatuamae" class="p-4 focus:outline-none rounded-sm bg-gray-900">
+        <button onclick="addMusic()">Submit</button>
+      </div>
+      <div id="music-list" class="grid grid-cols-3 gap-4 p-8">
+        
+      </div>
+      <input type="range" class="absolute bot-0 right-0" min="0" max="100" value="25" id="volume" orient="vertical" />
+    </main>
+  </div>
+</body>
+</html>
