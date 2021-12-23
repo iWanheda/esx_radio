@@ -1,7 +1,7 @@
 const playMusic = (name, url) => {
   const volume = document.getElementById("volume").value / 100;
   console.log(volume);
-  fetch("https://cona/playMusic", {
+  fetch("https://esx_radio/playMusic", {
     method: "POST",
     headers: {
       "Content-Type": "application/json; charset=UTF-8",
@@ -27,7 +27,7 @@ const addMusic = () => {
     const musicUrl = document.getElementById("url");
 
     if (musicName && musicUrl) {
-      fetch("https://cona/newMusic", {
+      fetch("https://esx_radio/newMusic", {
         method: "POST",
         headers: {
           "Content-Type": "application/json; charset=UTF-8",
@@ -43,7 +43,7 @@ const addMusic = () => {
 
 window.addEventListener("keyup", (event) => {
   if (event.key === "Escape") {
-    fetch("https://cona/close", {
+    fetch("https://esx_radio/close", {
       method: "POST",
     }).then((resp) => resp.json());
     const main = document.getElementById("main");
